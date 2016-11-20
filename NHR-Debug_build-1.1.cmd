@@ -1,7 +1,7 @@
 @echo off
 set 版本=1.1
 :初始化安全性检测
-set 测试=!@#$%^123456
+set 测试=!@#$%^abcABC123123123456
 echo %测试%>%temp%\tmp_!a!
 set /p 对比=<%temp%\tmp_!a!
 if "%对比%"=="%测试%"  goto 环境变量清除
@@ -85,21 +85,20 @@ goto 输入密码
 :主界面
 cls
 set 测试模式=0
-echo 欢迎使用NEW HEIMI RagProgram
 echo 当前版本为%版本%
-echo Power By HEIMI Group
+echo Power By M2Note Developers Group
 ping -n 3 127.1>nul
 cls
 set 发布版本=False
-echo 这个版本为开发者公开测试版本，内部版本代号为X012V
-echo 更新时间 20160728
+echo 这个版本为开发者公开测试版本，内部版本代号为X012VZAD
+echo 更新时间 20161120
 ping -n 3 127.1>nul
 cls
 echo NHR %版本% 当前用户:%用户名%
 echo 即将开始制作第三方程序
 set /p 程序名称=请输入程序名(无需后缀):
 cd.>%程序名称%.cmd
-::D201607281024CJ W End
+::D201611202502RX T End
 pause
 goto :eof
 :检测赋值变量1-2
